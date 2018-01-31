@@ -15,6 +15,11 @@ Page({
       url: '../logs/logs'
     })
   },
+  startGame: function() {
+    wx.navigateTo({
+      url: '../fly/fly'
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

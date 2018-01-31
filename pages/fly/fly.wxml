@@ -1,0 +1,25 @@
+<!--pages/fly/fly.wxml-->
+<view class="container">
+  <!-- <view class="content"> -->
+  <button class="weui-btn" type="primary" bindtap="getHeight">飞</button>
+  <view wx:if="{{loading}}" class="weui-loading"></view>
+  
+  <block wx:else>
+    <view class="page__bd">
+      <view class="weui-article">
+        <view class="weui-article__h1">
+          {{result}}
+        </view>
+        <view class="weui-article__h1">latitude({{latitude}}) 纬度，浮点数，范围为-90~90，负数表示南纬 </view>
+        <view class="weui-article__h1">longitude({{longitude}}) 经度，浮点数，范围为-180~180，负数表示西经 </view>
+        <view class="weui-article__h1">speed({{speed}}) 速度，浮点数，单位m/s </view>
+        <view class="weui-article__h1">accuracy({{accuracy}}) 位置的精确度 </view>
+        <view class="weui-article__h1">altitude({{altitude}}) 高度，单位 m 1.2.0</view>
+        <view class="weui-article__h1">verticalAccuracy({{verticalAccuracy}}) 垂直精度，单位 m（Android 无法获取，返回 0） 1.2.0</view>
+        <view class="weui-article__h1">horizontalAccuracy({{horizontalAccuracy}}) 水平精度，单位 m</view>
+      </view>
+    </view>
+  </block>
+
+  <!-- </view> -->
+</view>
